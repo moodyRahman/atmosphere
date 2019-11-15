@@ -1,0 +1,5 @@
+josephY -- 2019-11-14 21:35
+Began working on implementing the UNSTATS API, running into an issue where 
+for most country codes, indicator 1.1.1 has blank "data." I don't know if this
+is a problem with the API, my querystring, or something else. Indicator 1.1.1
+for M49 code 1 (the World) works though, which is nice.
