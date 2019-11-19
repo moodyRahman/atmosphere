@@ -34,6 +34,17 @@ def index():
     return render_template('index.html')
 
 
+
+@app.route("/login")
+def login():
+	if "username" in request.args:
+		// sqlite check
+	else:
+		return render_template("login.html")
+	return "reee"
+
+
+
 @app.route("/lookup")
 def lookup():
     if 'user' in session:
@@ -58,7 +69,7 @@ def lookup():
             return render_template("lookup.html", data=data)
 
 
-    
+
 
 if __name__ == "__main__":
     app.debug = True
