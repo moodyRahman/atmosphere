@@ -29,6 +29,20 @@ app = Flask(__name__)  # create instance of class Flask
 app.secret_key = os.urandom(24)
 
 
+
+def runsqlcommand(command):
+    DB_FILE = "data.db"
+    db = sqlite3.connect(DB_FILE)  # open if file exists, otherwise create
+    c = db.cursor()  # facilitate db ops
+    c.execute(command)
+    if "select" in command.lower():
+        return c.fetchall()
+    db.commit()  # save changes
+	db.close()  # close database
+
+
+
+
 @app.route("/")  # assign following fxn to run when root route requested
 def index():
     return render_template('index.html')
@@ -38,7 +52,7 @@ def index():
 @app.route("/login")
 def login():
 	if "username" in request.args:
-		// sqlite check
+		# sqlite check
 	else:
 		return render_template("login.html")
 	return "reee"
