@@ -1,9 +1,10 @@
-# Project Name by Atmosphere
+# ATMO by Atmosphere
 
 ---
 
 ## Roster
-* Alice Ni
-* Moody Rahman
-* Joseph Yusufov
-* David Wang
+* Alice Ni : PM, bootstrap
+* Moody Rahman : Database, python 
+* Joseph Yusufov : API, bootstrap
+* David Wang : Python, front end
+
